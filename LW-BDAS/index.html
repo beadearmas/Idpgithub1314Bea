@@ -1,0 +1,60 @@
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<title>Clientes de Dominio</title>
+</head>
+<body>
+<div style='display:table-row; padding: 10px;'>
+  <div style='float: left; width=20%; padding:10px;'>
+  <img src='./files/logo.png'/>
+  </div>
+  <div style='float: left;padding:10px'>
+  <ul>
+    <li><b>M&oacute;dulo:</b> <i>Sistemas Operativos</i></li>
+    <li><b>T&iacute;tulo del trabajo</b> <i>Informe de Clientes de Dominio</i></li>
+    <li><b>Componentes del grupo:</b> <i>Beatriz de Armas Salvador</i></li>
+    <li><b>Curso Acad&eacute;mico:</b> <i>2013/2014</i></li>
+    <li><b>Fecha de entrega:</b> <i>2 de Junio de 2014</i></li>
+  </ul>
+  </div>
+</div>
+<div style='float: clear;background-color: #eeeeee; border:2px solid; border-radius:10px; padding: 10px;'>
+<a href='#bloque1'>1. Configurar clientes</a> | <a href='#bloque2'>2. Unirse al dominio</a> | <a href='#bloque3'>3. Comprobación</a>
+</div>
+<a id='bloque1'/><h2>1. Configurar clientes</h2>
+<p>Tener en cuenta los siguientes aspectos en la configuración del cliente Ubuntu. </p>
+<ul>
+  <li>HORA: La fecha/hora del sistema debe sincronizarse con el PDC. Si hiciera falta cambiar la zona horaria podemos usar el comando &quot;dpkg-reconfigure tzdata&quot;.<br /></li>
+  <li>VIRTUALBOX: GNU/Linux y PDC, deben estar en la misma red, por lo que es aconsejable configurar la red de las máquinas virtuales en modo &quot;puente&quot; las dos (El modo &quot;Red interna&quot; también funcionará bien). </li>
+  <li>RED: Recordar que los serviores deben tener la configuración de red estática.</li>
+</ul>
+<p><b>Configuración de red de los clientes:</b><br /></p>
+<ul>
+</ul>
+<ul>
+  <li>Configuración de red estática.</li>
+  <br/><img src='./files/1.png'/><br/><br/>
+  <li>Configurar los DNS en una máquina Debian/Ubuntu, (/etc/network/interfaces).<br /></li>
+  <br/><img src='./files/2.png'/><br/><br/>
+</ul>
+<a id='bloque2'/><h2>2. Unirse al dominio</h2>
+  <li>Para ejecutar el programa, abrimos un terminal y ponemos: <font face="courier new,courier,monospace">domainjoin-gui</font> </li>
+  <li>Completamos la siguiente información de configuración:
+    <ul>
+      <li><font face="LiberationSerif-Regular"><font face="courier new,courier,monospace">Computer name</font>: lo dejamos igual.</font> </li>
+      <li><font face="LiberationSerif-Regular"><font face="courier new,courier,monospace">Domain</font>: el dominio de nuestro PDC.</font> </li>
+    </ul></li>
+  <li>Luego nos pedirá usuario y contraseña. Aquí ponemos el administrador del dominio y su contraseña.</li>
+  <br/><img src='./files/6.png'/><br/><br/><img src='./files/7.png'/><br/><br/>
+ </ul><hr />
+<p><br /></p>
+<ul>
+</ul>
+<a id='bloque3'/><h2>3. Comprobación</h2>
+<ul>
+  <li>Desde el cliente, entramos al sistema con algún usuario del dominio.</li>
+  <br/><img src='./files/8.png'/><br/><br/><img src='./files/9.png'/><br/><br/><img src='./files/10.png'/><br/><br/>
+</ul>
+<hr />
+</body>
+</html>
