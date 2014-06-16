@@ -1,0 +1,129 @@
+<html>
+<head>
+	<title>A1: Registro de eventos local</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+</head>
+<body>
+<div style='display:table-row; padding: 10px;'>
+  <div style='float: left; width=20%; padding:10px;'>
+  <img src='./files/logo.png'/>
+  </div>
+  <div style='float: left;padding:10px'>
+  <ul>
+    <li><b>M&oacute;dulo:</b> <i>Sistemas Operativos</i></li>
+    <li><b>T&iacute;tulo del trabajo</b> <i>A1: Registro de eventos local</i></li>
+    <li><b>Componentes del grupo:</b> <i>Beatriz de Armas Salvador</i></li>
+    <li><b>Curso Acad&eacute;mico:</b> <i>2013/2014</i></li>
+    <li><b>Fecha de entrega:</b> <i>16 de Junio de 2014</i></li>
+  </ul>
+  </div>
+</div>
+<div style='float: clear;background-color: #F6EBA5; border:2px solid; border-radius:10px; padding: 10px;'>
+<a href='#bloque1'>Registro en Windows</a> | <a href='#bloque2'>Registro en GNU/Linux (GUI)</a> | <a href='#bloque3'>Registro en GNU/Linux (Comandos)</a> | <a href='#bloque4'>Configuración de Logrotate</a>
+</div>
+<h1><a id='bloque1'>Registro en Windows</a></h1>
+<p>Debemos activar unas directivas de seguridad, para auditar los inicios de sesión al sistema </p>
+<img src='./files/1idp.png'>
+<ul>
+  <li>Poner como nombre NETBIOS de la máquina:</li>
+  <ul>
+    <li>&quot;1er-apellido-del-alumno&quot;+2 =&gt; Windows 7</li>
+    <img width='500px' src='./files/win.png'>
+    <p></p>
+    <li>&quot;1er-apellido-del-alumno&quot;+1 =&gt; Winodws 2008 Server</li>
+    <img src='./files/3idp.png'>
+  </ul>
+  <li>Crear los usuarios alu1, alu2 y alu3.</li>
+  <img src='./files/4idp.png'>
+  <li>Hacer las siguientes acciones:</li>
+  <ul>
+    <li>Entrar al sistema con alu1 de forma correcta.</li>
+    <img src='./files/5idp.png'>
+    <img src='./files/6idp.png'>
+    <li>Intentar entrar con alu2 poniendo la clave mal.</li>
+    <img src='./files/7idp.png'>
+     <img src='./files/8idp.png'>
+    <li>y no entrar con alu3.</li>
+	</ul>
+	<p>Buscar en el sistema, la herramienta visor de sucesos. Comprobar cómo se registran los eventos anteriores.
+	Exportar los eventos a ficheros CSV. Incluir fichero en la entrega con el nombre "registro-windows.csv".</p>
+	<img src='./files/9idp.png'> 
+<h1><a id='bloque2'>Registro en GNU/Linux (GUI)</a></h1>
+<ul>
+  <li>Se recomienda usar GNU/Linux Debian.</li>
+  <li>Para cambiar el nombre de la máquina, hacemos:</li>
+  <ul>
+    <li># hostname &quot;1er-apellido-alumno&quot;+3</li>
+    <li># hostname (Para comprobar)</li>
+    <img src='./files/10idp.png'>
+  </ul>
+  <li>Instalar el programa <a title="webmin" target="_blank" href="http://www.webmin.com/">Webmin</a>.</li>
+  <ul>
+    <li>Primero lo inentamos vía gestor de paquetes y/o apt-get install.<br /></li>
+    <li>También podemos hacerlo descargando el paquete deb de la web de Webmin. Para instalarlo usamo dpkg.</li>
+    <img src='./files/11idp.png'>
+  </ul>
+  <ul>
+    <li>Si tenemos problemas de dependencias de paquetes, instalando el paquete deb, entonces ejecutamos el siguiente comando para resolverlas: </li>
+  </ul>
+  <li>Para iniciar el servicio Webmin, ejecutamos:/etc/init.d/webmin start</li>
+  <li>Para acceder al programa Webmin, abrimos un navegador web y ponemos como URL</li>
+  <li>Vamos a analizar los ficheros de log con la herramienta anterior. Para ello vamos a las opciones del menú &quot;<span style="font-style: italic;">System -&gt; System Log</span>&quot;. </li>
+	<img src='./files/12idp.png'>
+</ul> <hr />
+<h1><a id='bloque3'>Registro en GNU/Linux (Comandos)</a></h1>
+<h3>5.1 Configuración de Syslog</h3>Realizar las siguientes tareas:
+<ul>
+  <li>Consultar el fichero /etc/rsyslog.d/50-default.conf</li>
+  <li>Añadir la siguiente línea al fichero de configuracion /etc/rsyslog.d/50-default.conf</li>
+  <ul>
+    <li>local0.* /var/log/nombredelalumno/prueba-local.log </li>
+      <img src='./files/13idp.png'>
+  </ul>
+  <li>Con el usuario root, crear el fichero "/var/log/nombredelalumno/prueba-local.log" vacío</li>
+  <li>Ahora debemos reiniciar el servicio rsyslog, para que se recargue la nueva configuración.</li>
+  <ul>
+    <li>etc/init.d/rsyslog stop</li>
+      <img src='./files/14idp.png'>
+    <li>/etc/init.d/rsyslog start</li>
+      <img src='./files/15idp.png'>
+  </ul>
+</ul>
+<h3>5.2 Comprobar Rsyslog<br /></h3>
+<ul>
+  <li>cat /var/log/nombredelalumno/prueba-local.log: Esto nos muestra que el fichero de log está vació por el momento.<br /></li>
+    <img src='./files/16idp.png'>
+  <li>Crear varios registros mediante el comando logger, usando varias prioridades diferentes y otros valores. Por ejemplo, probar los parámetros de logger -i, -t, etc.<br /></li>
+  <li>Consultar los mensajes registrados, e indicar sobre un ejemplo el significado de cada campo de una línea concreta del log. </li>
+    <img src='./files/17idp.png'>
+</ul><hr />
+<p><br /></p>
+<ul>
+</ul>
+<h1><a id='bloque4'>Configuración de Logrotate</a></h1>
+    <p>Ahora vamos a configurar logrotate para generar rotaciones de nuestro fichero de log. Para ello crearemos el fichero /etc/logrotate.d/nombre-del-alumno con el siguiente contenido:</p>
+	    <img src='./files/18idp.png'>
+	
+ <li>Vamos a generar muchos mensajes de log en el fichero de registro de eventos:</li>
+  <ul>
+    <li>Podemos usar el script proporcionado por el profesor, cuya función es la de generar cientos de mensajes de log hacia el nuevo fichero de registro. Modo de uso:<br /></li>
+    <ul>
+      <li>Descargar fichero &quot;send-messages.sh&quot;.</li>
+      <li>Dar permisos de ejecución: &quot;chmod +x send-messages.sh&quot;.</li>
+          <img src='./files/19idp.png'>
+      <li>Ejecutar el script &quot;./send-mesagges.sh&quot;.<br /></li>
+          <img src='./files/20idp.png'>
+    </ul>
+  </ul>
+  <ul>
+    <li>Podemos invocando el comando siguiente para aumentar el tamaño del registro de log con la información contenida en un fichero de texto: <span style="font-family: courier new,courier,monospace;">logger -p local0.notice -t ETC-MOTD -f /etc/motd</span></li>
+  </ul>
+  <li>Comprobar que el fichero de log ha crecido de tamaño.</li>
+  <ul>&nbsp;
+  </ul>
+  <li>Para que se dispare la rotación de log (logrotate) automáticamente podemos reiniciar el equipo. Sin reiniciar el equipo, podemos ejecutar manualmente el programa de rotación logrotate de la siguiente forma: <span style="font-family: courier new,courier,monospace;">/usr/sbin/logrotate -f /etc/logrotate.conf</span><br /></li>
+  <li>Comprobar que el fichero cambia de tamaño, y que efectivamente se ha producido la rotación de los ficheros de log.</li>
+	    <img src='./files/21idp.png'>
+</ul><br /><hr />
+</body>
+</html>
