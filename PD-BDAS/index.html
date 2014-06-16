@@ -1,0 +1,103 @@
+<html>
+<head>
+	<title>PDC Politicas o directivas grupo</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+</head>
+<body>
+<div style='display:table-row; padding: 10px;'>
+  <div style='float: left; width=20%; padding:10px;'>
+  <img src='./files/logo.png'/>
+  </div>
+  <div style='float: left;padding:10px'>
+  <ul>
+    <li><b>M&oacute;dulo:</b> <i>Sistemas Operativos</i></li>
+    <li><b>T&iacute;tulo del trabajo</b> <i>PDC Politicas o directivas grupo</i></li>
+    <li><b>Componentes del grupo:</b> <i>Beatriz de Armas Salvador</i></li>
+    <li><b>Curso Acad&eacute;mico:</b> <i>2013/2014</i></li>
+    <li><b>Fecha de entrega:</b> <i>16 de Junio de 2014</i></li>
+  </ul>
+  </div>
+</div>
+<div style='float: clear;background-color: #F4FDA3; border:2px solid; border-radius:10px; padding: 10px;'>
+<a href='#bloque1'>1. Políticas o directivas de grupo</a> | <a href='#bloque2'>2. Objetivo</a> | <a href='#bloque3'>3. Administrar las políticas de grupo</a> | <a href='#bloque4'>4. Ejemplos de directivas</a> | <a href='#bloque5'>5. Comprobación</a> 
+</div>
+<a id='bloque1'/><h1>1. Políticas o directivas de grupo</h1>
+<ul>
+  <li>Leer/consultar la documentación que se proporciona. Concretamente el fichero<a title="Ventana emergente" href="https://moodle.iespuertodelacruz.es/file.php/133/dominios/doc/win2008server/M34_directivas_grupos.pdf"> M34_directivas_grupos.pdf</a> (Se puede descargar desde &quot;Documentación/Win2008Server&quot;).<br /></li>
+  <li>Trabajo individual con entrega en plantilla HTML, vía repositorio GITHUB.</li>
+</ul><hr />
+<p><br /></p>
+<ul>
+</ul>
+<a id='bloque2'/><h1>2. Objetivo<br /></h1>
+<ul>
+  <li>Establecer unas directivas para la OU &quot;jedi&quot;, y otras diferentes para la OU &quot;sith&quot;.</li>
+  <br/><img src='./files/1.png'/><br/><img src='./files/2.png'/><br/><img src='./files/3.png'/><br/>
+</ul>
+<ul>
+	<li>Después vamos a "Administración de Grupos", seleccionamos "Domain Controllers" y con el botón derecho "Bloqueamos la herencia".</li>
+	<br/><img src='./files/herencia.png'/><br/>
+	<p></p>
+	<li>Seguidamente, vamos a crear un grupo de directivas para Jedi y Sith.</li>
+	<img src='./files/direcJEDI.png'/><br/> <img src='./files/sithjedi.png'/><br/><br/>
+	<img src='./files/gru.png'/><br/><br/>
+</ul><hr /><br />
+<ul>
+</ul>
+<a id='bloque3'/><h1>3. Administrar las políticas de grupo<br /></h1>
+<ul>
+</ul>
+<p>Para editar configuraciones de Directiva de grupo:</p>
+<ul>
+  <li>En Group Policy Management (Administración de directivas de grupo), en el árbol de consola, desplegar Group Policy Objects (Objetos de Directiva de grupo). Click con el botón derecho del ratón en el GPO y seleccionar Edit (Editar).</li>
+  <li>En el Editor de objetos de Directiva de grupo, buscar la Directiva de grupo que queremos modificar y hacemos doble clic. En el cuadro de diálogo Propiedades, cambiamos la configuración y Aceptar.</li>
+  <br/><img src='./files/editor.png'/><br/><br/>
+</ul><hr />
+<p><br /></p>
+<a id='bloque4'/><h1>4. Ejemplos de directivas<br /></h1>
+<ul>
+</ul> <b>Quitar el menú Ejecutar del menú Inicio </b><br />
+<ul>
+  <li>Ubicación: Configuración de usuario / Plantillas administrativas / Menú Inicio y barra de tareas (User configuration / Administrative Templates / Start Menu and Taskbar)</li>
+  <li>Configuración de Directiva de grupo: Quitar el menú Ejecutar del menú Inicio (Remove Run menu from Start Menu)</li>
+  <li>Opción Habilitada</li>
+  <br/><img src='./files/menu.png'/><br/><br/> <img src='./files/quitar.png'/><br/><br/>
+</ul><b>Prohibir el acceso al Panel de control </b>
+<ul>
+  <li>Ubicación: Configuración de usuario / Plantillas administrativas / Panel de control (User configuration / Administrative Templates / Control Panel)</li>
+  <li>Configuración de Directiva de grupo: Prohibir el acceso al Panel de control (Prohibit access to the Control Panel)</li>
+  <li>Opción Habilitada</li>
+  <br/><img src='./files/panel.png'/><br/><br/><img src='./files/quitarp.png'/><br/><br/>
+</ul><b>Quitar el icono Mis sitios de red del menú inicio </b>
+<ul>
+  <li>Ubicación: Configuración de usuario / Plantillas administrativas / Menú Inicio y barra de tareas (User configuration / Administrative Templates / Start Menu and Taskbar) <br /></li>
+  <li>Configuración de Directiva de grupo: Quitar el icono Mis sitios de red del men ú Inicio (Remove My Network Places icon from Start Menu)</li>
+  <li>Opción Habilitada</li>
+  <br/><img src='./files/icono.png'/><br/><br/><img src='./files/quitari.png'/><br/><br/>
+</ul><b>Quitar Conexiones de red del menú Inicio </b>
+<ul>
+  <li>Ubicación: Configuración de usuario / Plantillas administrativas / Menú Inicio y barra de tareas (User configuration / Administra tive Templates / Start Menu and Taskbar)</li>
+  <li>Configuración de Directiva de grupo: Quitar Conexiones de red del menú Inicio (Remove Network Connections from the Start Menu)</li>
+  <li>Opción Habilitada <br /></li>
+  <br/><img src='./files/conex.png'/><br/><br/><img src='./files/quitarc.png'/><br/><br/>
+</ul><b>Ocultar unidades específicas en Mi PC </b>
+<ul>
+  <li>Ubicación: Configurac ión de usuario / Plantillas administrativas / Componentes de Windows / Explorador de Windows (User configuration / Administrative Templates / Windows Components / Windows Explorer) <br /></li>
+  <li>Configuración de Directiva de grupo: Ocultar estas unidades específicas en Mi PC (Hide these specified drives in My Computer) o Impedir el acceso a las unidades desde Mi PC (Prevent Access to drives from my computer). <br /></li>
+  <li>Opción Habilitada. Elegir un combinación adecuada como bloquear las unidades A y B (Restrict A y B drives only).</li>
+  <br/><img src='./files/ocul.png'/><br/><br/><img src='./files/quitaro.png'/><br/><br/>
+</ul><b>Habilitar Quitar “Conectar a unidad de red” y “Desconectar de unidad de red”</b><br />
+<ul>
+  <li>Ubicación: Configuración de usuario / Plantillas administrativas / Componentes de Windows / Explorador de Windows (User configuration / Administrative Templates / Windows Components / Windows Explorer) <br /></li>
+  <li>Configuración de Directiva de grupo: Quitar “Conectar a unidad de red” y “Desconectar de unidad de red” (Remove “Map Network Drive” and “Disconnect Network Drive”).</li>
+  <li>Opción Habilitada </li>
+  <br/><img src='./files/ex.png'/><br/><br/> <img src='./files/quitarex.png'/><br/><br/>
+</ul> <hr /><br />
+<ul><li>Profe, que en las imagenes se ve como deshabilitado pero que en verdad habia puesto habilitado y para no estar realizando las nuevas capturas, lo deje asi.</li></ul>
+<a id='bloque5'/><h1>5. Comprobación</h1>
+<ul>
+  <li>Aquí muestro el resultado de las directivas. Cuando entro con el usuario maul no se muestra el botón ejecutar y en cambio con yoda si, ya que esta directiva no pertenece a los jedi.</li>
+  <br/><img src='./files/16.png'/><br/><img src='./files/17.png'/><br/><br/>
+</ul>
+</body>
+</html>
